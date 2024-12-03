@@ -1,0 +1,46 @@
+class SportsClub:
+    def _init_(self, name, members):
+        self.name = name
+        self.members = members
+
+    def display_info(self):
+        print(f"Nama Klub: {self.name}")
+        print(f"Jumlah Anggota: {self.members}")
+
+
+class SwimmingClub(SportsClub):
+    def display_info(self):
+        print("Detail Klub Renang:")
+        super().display_info()
+
+
+class BasketballClub(SportsClub):
+    def display_info(self):
+        print("Detail Klub Basket:")
+        super().display_info()
+
+
+class FencingClub(SportsClub):
+    def display_info(self):
+        print("Detail Klub Anggar:")
+        super().display_info()
+
+
+class BowlingClub(SportsClub):
+    def display_info(self):
+        print("Detail Klub Bowling:")
+        super().display_info()
+
+
+# Membuat objek untuk setiap klub
+swimming = SwimmingClub("Aqua Sharks", 50)
+basketball = BasketballClub("Hoop Masters", 30)
+fencing = FencingClub("Blade Warriors", 20)
+bowling = BowlingClub("Strike Force", 40)
+
+# Menampilkan informasi masing-masing klub
+clubs = [swimming, basketball, fencing, bowling]
+
+for club in clubs:
+    club.display_info()
+    print("-" * 30)
